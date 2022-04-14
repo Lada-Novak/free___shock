@@ -1,0 +1,14 @@
+body{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+  font-style: normal;
+  color: $default-color;
+  @extend %opensans-400;
+}
+
+.container{
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
