@@ -54,6 +54,7 @@ export const scripts = () => {
 	return gulp
 		.src([
       "node_modules/jquery/dist/jquery.js",
+      "node_modules/fancybox/dist/js/jquery.fancybox.js",
 			"node_modules/swiper/swiper-bundle.min.js",
 			"node_modules/mixitup/dist/mixitup.min.js",
       "node_modules/slick-carousel/slick/slick.js",
