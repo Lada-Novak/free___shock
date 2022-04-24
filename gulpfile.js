@@ -6,14 +6,22 @@ import autoprefixer from "gulp-autoprefixer";
 import uglify from "gulp-uglify";
 import bs from "browser-sync";
 import imagemin from "gulp-imagemin";
-import { gifsicle, mozjpeg, optipng, svgo } from "gulp-imagemin";
+import {
+	gifsicle,
+	mozjpeg,
+	optipng,
+	svgo
+} from "gulp-imagemin";
 import del from "del";
 import fs from "fs";
 import fonter from "gulp-fonter";
 import ttf2woff2 from "gulp-ttf2woff2";
+import svgSprite from "gulp-svg-sprite";
+import cheerio from "gulp-cheerio";
 
 const scss = gulpSass(dartSass);
 const browserSync = bs.create();
+
 
 // Server
 
@@ -36,7 +44,9 @@ export const clearDist = () => {
 export const styles = () => {
 	return gulp
 		.src("app/scss/style.scss")
-		.pipe(scss({ outputStyle: "compressed" }))
+		.pipe(scss({
+			outputStyle: "compressed"
+		}))
 		.pipe(concat("style.min.css"))
 		.pipe(
 			autoprefixer({
@@ -53,11 +63,11 @@ export const styles = () => {
 export const scripts = () => {
 	return gulp
 		.src([
-      "node_modules/jquery/dist/jquery.js",
-      "node_modules/fancybox/dist/js/jquery.fancybox.js",
+			"node_modules/jquery/dist/jquery.js",
+			"node_modules/fancybox/dist/js/jquery.fancybox.js",
 			"node_modules/swiper/swiper-bundle.min.js",
 			"node_modules/mixitup/dist/mixitup.min.js",
-      "node_modules/slick-carousel/slick/slick.js",
+			"node_modules/slick-carousel/slick/slick.js",
 			"app/js/main.js",
 		])
 		.pipe(concat("main.min.js"))
@@ -73,16 +83,57 @@ export const images = () => {
 		.src("app/images/**/*.*")
 		.pipe(
 			imagemin([
-				gifsicle({ interlaced: true }),
-				mozjpeg({ quality: 75, progressive: true }),
-				optipng({ optimizationLevel: 5 }),
+				gifsicle({
+					interlaced: true
+				}),
+				mozjpeg({
+					quality: 75,
+					progressive: true
+				}),
+				optipng({
+					optimizationLevel: 5
+				}),
 				svgo({
-					plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+					plugins: [{
+						removeViewBox: true
+					}, {
+						cleanupIDs: false
+					}],
 				}),
 			])
 		)
 		.pipe(gulp.dest("dist/images"));
 };
+
+// Sprites
+export const svg = () => {
+	return gulp
+		.src("app/images/icons/**/*svg")
+		.pipe(
+			cheerio({
+				run: ($) => {
+					$("[fill]").removeAttr("fill"); // очищаем цвет у иконок по умолчанию, чтобы можно было задать свой
+					$("[stroke]").removeAttr("stroke"); // очищаем, если есть лишние атрибуты строк
+					$("[style]").removeAttr("style"); // убираем внутренние стили для иконок
+				},
+				parserOptions: {
+					xmlMode: true
+				},
+			})
+		)
+		.pipe(
+			svgSprite({
+				mode: {
+					stack: {
+						sprite: "sprite.svg",
+						example: true,
+					},
+				},
+			})
+		)
+		.pipe(gulp.dest("app/images/"));
+};
+
 
 // Fonts
 
@@ -168,6 +219,7 @@ export const updateFontsStyle = () => {
 	});
 
 	return gulp.src("app/");
+
 	function cb() {}
 };
 
@@ -182,8 +234,9 @@ let copyToDist = () => {
 				"app/css/**/*.css",
 				"app/fonts/*.woff",
 				"app/fonts/*.woff2",
-			],
-			{ base: "app" }
+			], {
+				base: "app"
+			}
 		)
 		.pipe(gulp.dest("dist/"));
 };
@@ -196,6 +249,7 @@ export const watch = () => {
 	gulp.watch(["app/scss/**/*.scss"], styles);
 	gulp.watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
 	gulp.watch(["app/**/*html"]).on("change", browserSync.reload);
+	gulp.watch(["app/images/icons/**/*.svg"], svg);
 };
 
-export default gulp.series(gulp.parallel(styles, scripts, server, watch));
+export default gulp.series(gulp.parallel(styles, svg, scripts, server, watch));
