@@ -248,19 +248,19 @@
 
 				<ul class="top-product__filter">
 					<li class="top-product__items">
-						<button class="top-product__btn" data-filter="all" type="button">Все товары</button>
+						<button class="top-product__btn button__product" data-filter="all" type="button">Все товары</button>
 					</li>
 					<li class="top-product__items">
-						<button class="top-product__btn" data-filter=".category-a" type="button">Фрукты</button>
+						<button class="top-product__btn button__product" data-filter=".category-a" type="button">Фрукты</button>
 					</li>
 					<li class="top-product__items">
-						<button class="top-product__btn" data-filter=".category-b" type="button">Овощи</button>
+						<button class="top-product__btn button__product" data-filter=".category-b" type="button">Овощи</button>
 					</li>
 					<li class="top-product__items">
-						<button class="top-product__btn" data-filter=".category-c" type="button">Напитки</button>
+						<button class="top-product__btn button__product" data-filter=".category-c" type="button">Напитки</button>
 					</li>
 					<li class="top-product__items">
-						<button class="top-product__btn" data-filter=".category-d" type="button">Бакалея</button>
+						<button class="top-product__btn button__product" data-filter=".category-d" type="button">Бакалея</button>
 					</li>
 				</ul>
 
@@ -381,10 +381,10 @@
           <li class="top-sale__item top-sale__item--fruit">
             <h3 class="top-sale__title">
               Свежие фрукты
-              <strong class="top-sale__subtitle">
-                Начни фруктовое лето всего от 99 ₽
-              </strong>
             </h3>
+            <p class="top-sale__subtitle">
+              Начни фруктовое лето всего от 99 ₽
+            </p>
             <a class="top-sale__link" href="#">
               Перейти к покупкам
             </a>
@@ -393,10 +393,10 @@
           <li class="top-sale__item top-sale__item--vegetables">
             <h3 class="top-sale__title">
               Сезонная распродажа
-              <strong class="top-sale__subtitle">
-                Овощепад до -50%
-              </strong>
             </h3>
+            <p class="top-sale__subtitle">
+              Овощепад <br> до - 50%
+            </p>
             <a class="top-sale__link" href="#">
               Перейти к покупкам
             </a>
@@ -405,10 +405,10 @@
           <li class="top-sale__item top-sale__item--bread">
             <h3 class="top-sale__title">
               Ням-ням
-              <strong class="top-sale__subtitle">
-                Свежий хлебчик
-              </strong>
             </h3>
+            <p class="top-sale__subtitle">
+              Свежий хлебчик
+            </p>
             <a class="top-sale__link" href="#">
               Перейти к покупкам
             </a>
@@ -416,6 +416,44 @@
         </ul>
 			</div>
 		</section>
+
+    <section class="sales">
+      <div class="container">
+        <h2 class="sales__title title">
+        	Акции
+        </h2>
+
+        <ul class="sales__filter">
+        	<li class="sales__items">
+        		<button class="sales__btn button__product" data-filter="all_sales" type="button">Все товары</button>
+        	</li>
+        	<li class="sales__items">
+        		<button class="sales__btn button__product" data-filter=".category-" type="button">Новинки</button>
+        	</li>
+        	<li class="sales__items">
+        		<button class="sales__btn button__product" data-filter=".category-" type="button">Хиты</button>
+        	</li>
+        </ul>
+
+        <ul class="sales__article">
+          <li class="sales__article-item mix category-b category-d">
+          	<p class="article__badge article__badge--new">Новинка</p>
+          	<a class="sales__article-link" data-fancybox="gallery" href="">
+          		<div class="sales__article-helper"></div>
+          		<img class="sales__article-img" src="" alt="product images" width="100" height="75">
+          	</a>
+          	<h3 class="sales__article-title"></h3>
+            <p class="sales__article-presence"></p>
+          	<p class="sales__article-price"></p>
+            <p class="article__oldPrice"></p>
+            <button class="article__rating" type="button"></button>
+          </li>
+        </ul>
+
+
+        <button class="sales__add button" type="button">Показать еще</button>
+      </div>
+    </section>
 	</main>
 
 	<footer class="footer">
