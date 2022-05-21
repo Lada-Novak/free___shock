@@ -1,0 +1,68 @@
+.advantages {
+	margin-bottom: 90px;
+	padding: 50px 0 30px 0;
+	background-color: $silver-100;
+
+	&__list {
+		margin: 0 160px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		align-items: baseline;
+	}
+
+	&__item {
+		max-width: 265px;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			background-repeat: no-repeat;
+			width: 56px;
+			height: 50px;
+			top: 0;
+			left: -65px;
+		}
+
+		&--moto::before {
+			background-image: url('../images/stack/sprite.svg#extra_info1');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			filter: invert(54%) sepia(15%) saturate(2992%) hue-rotate(46deg) brightness(99%) contrast(89%);
+			;
+		}
+
+		&--returns::before {
+			background-image: url('../images/stack/sprite.svg#extra_info2');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			filter: invert(54%) sepia(15%) saturate(2992%) hue-rotate(46deg) brightness(99%) contrast(89%);
+		}
+
+		&--clock::before {
+			background-image: url('../images/stack/sprite.svg#extra_info3');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			filter: invert(54%) sepia(15%) saturate(2992%) hue-rotate(46deg) brightness(99%) contrast(89%);
+		}
+	}
+
+
+
+	&__title {
+		margin-bottom: 7px;
+		@extend %opensans-600;
+		font-size: 16px;
+		line-height: 1.4;
+		color: $dark-900;
+	}
+
+	&__text {
+		line-height: 1.4;
+		max-width: 185px;
+	}
+}

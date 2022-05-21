@@ -23,6 +23,7 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify": "^3.0.2",
     "mixitup": "^3.3.1",
+    "rateyo": "^2.3.2",
     "sass": "^1.49.10",
     "slick-carousel": "^1.8.1",
     "swiper": "^8.1.0"

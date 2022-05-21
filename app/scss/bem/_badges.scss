@@ -1,0 +1,30 @@
+.badges {
+	@extend %opensans-700;
+	font-size: 10px;
+	line-height: 16px;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+
+	&__item {
+		max-width: max-content;
+		color: $white;
+		border-radius: 6px;
+		padding: 0 6px;
+
+		&:not(:last-child) {
+			margin-bottom: 6px;
+		}
+
+		&--green {
+			background-color: $green-900;
+		}
+
+		&--red {
+			background-color: $red-900;
+		}
+
+		&--orange {
+			background-color: $orange-900;
+		}
+	}
+}

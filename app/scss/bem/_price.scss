@@ -1,0 +1,21 @@
+.price {
+	display: flex;
+	flex-direction: column;
+	line-height: 1;
+
+	&__old {
+		position: relative;
+		margin-bottom: 6px;
+		color: $silver-600;
+
+		&::after {
+			content: "";
+			position: absolute;
+			border-bottom: 1px solid $silver-600;
+			width: 45px;
+			left: 0;
+			top: 6px;
+			transform: rotate(-14.99deg);
+		}
+	}
+}

@@ -51,4 +51,11 @@ $white:#FFFFFF;
 	font-weight: 900;
 }
 
+@mixin cut-text($line){
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
 

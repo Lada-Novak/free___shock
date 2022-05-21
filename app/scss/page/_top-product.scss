@@ -1,0 +1,56 @@
+.top-product {
+	margin-bottom: 70px;
+
+	&__title {
+		margin-bottom: 30px;
+	}
+
+///// фильтр
+	&__filters {
+		margin-bottom: 50px;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 25px;
+	}
+
+	&__add {
+		color: $green-900;
+		background-color: $white;
+		border: 1px solid $green-900;
+
+		&:focus {
+			background: $white;
+			box-shadow: 0px 0px 0px 4px rgba(99, 166, 14, 0.5);
+			border-radius: 3px;
+		}
+
+		&:hover {
+			background: $green-100;
+		}
+
+		&:active {
+			color: rgba(99, 166, 14, 0.5);
+			;
+			box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	/////карточка топовых продуктов
+	&__list {
+		margin-bottom: 50px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 30px;
+
+		@media (max-width: 1366px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@media (max-width: 900px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
