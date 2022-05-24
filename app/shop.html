@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Free__shock-каталог</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__top">
+			<div class="container">
+				<div class="top">
+					<ul class="top__info">
+						<li class="top__item top__item--car">
+							<a href="#" class="top__link">Адрес и время доставки</a>
+						</li>
+						<li class="top__item top__item--phone">
+							<a href="#" class="top__link">Горячая линия 24/7</a>
+						</li>
+					</ul>
+
+					<nav class="menu">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a class="menu__link" href="#">Доставка</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">О нас</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">Новости</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<div class="middle">
+			<div class="container">
+
+				<nav class="middle__menu">
+					<a class="middle__logo" href="#">
+						<svg class="middle__logo-img">
+							<use xlink:href="images/stack/sprite.svg#logo"></use>
+						</svg>
+					</a>
+
+					<div class="catalog">
+						<button class="catalog__btn" type="button">Каталог продуктов</button>
+						<ul class="catalog__list">
+							<li class="catalog__item">
+								<a class="catalog__link" href="#">Овощи и фрукты</a>
+							</li>
+							<li class="catalog__item">
+								<a class="catalog__link" href="#">Бакалея</a>
+							</li>
+							<li class="catalog__item">
+								<a class="catalog__link" href="#">Молочные продукты</a>
+							</li>
+							<li class="catalog__item">
+								<a class="catalog__link" href="#">Хлеб</a>
+							</li>
+							<li class="catalog__item">
+								<a class="catalog__link" href="#">Мясо</a>
+							</li>
+							<li class="catalog__item">
+								<a class="catalog__link" href="#">Колбаса</a>
+							</li>
+							<li class="catalog__item">
+								<a class="catalog__link" href="#">Рыба</a>
+							</li>
+							<li class="catalog__item">
+								<a class="catalog__link" href="#">Алкоголь</a>
+							</li>
+							<li class="catalog__item">
+								<a class="catalog__link" href="#">Напитки</a>
+							</li>
+							<li class="catalog__item">
+								<a class="catalog__link" href="#">Торты</a>
+							</li>
+							<li class="catalog__item">
+								<a class="catalog__link" href="#">Мясо</a>
+							</li>
+							<li class="catalog__item">
+								<a class="catalog__link" href="#">Чай, кофе</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="search">
+						<form class="search__form">
+							<label class="search__form-lable sr-only" for="search"></label>
+							<svg class="search__icon">
+								<use xlink:href="images/stack/sprite.svg#search-icon"></use>
+							</svg>
+							<input class="search__input" id="search" type="search" name="form_serch"
+								placeholder="Найти в магазине ..." required>
+							<button class="search__btn" type="submit">Поиск</button>
+						</form>
+					</div>
+
+					<ul class="user">
+						<li class="user__item">
+							<a class="user__link user__link--user" href="#">
+								<svg class="user__img">
+									<use xlink:href="images/stack/sprite.svg#user__icon"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="user__item">
+							<a class="user__link user__link--heart" href="#">
+								<span class="user__num">12</span>
+								<svg class="user__img">
+									<use xlink:href="images/stack/sprite.svg#heart__icon"></use>
+								</svg>
+								<span class="sr-only">heart link</span>
+							</a>
+						</li>
+						<li class="user__item">
+							<a class="user__link user__link--cart" href="#">
+								<span class="user__num">12</span>
+								<svg class="user__img">
+									<use xlink:href="images/stack/sprite.svg#cart__icon"></use>
+								</svg>
+								<span class="sr-only">cart link</span>
+							</a>
+						</li>
+					</ul>
+
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+		<h1 class="sr-only">Catalog</h1>
+
+		<section class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="#">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="#">
+							Каталог товаров
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="shop">
+			<div class="container">
+				<h2 class="shop__title">
+					Каталог товаров
+				</h2>
+
+				<div class="shop__inner">
+					<div class="shop__filters">
+
+						<div class="shop__filter filter">
+							<div class="filter-category filter__item">
+								<h3 class="filter-category__title filter__title">
+									Категории
+								</h3>
+								<form class="filter-category__form" action="#">
+									<label class="filter-category__label">
+										<input class="filter-category__input" type="checkbox">
+										<div class="filter-category__checkbox">
+											<span>Овощи и фрукты</span>
+										</div>
+									</label>
+
+									<label class="filter-category__label">
+										<input class="filter-category__input" type="checkbox">
+										<div class="filter-category__checkbox">
+											<span>Бакалея</span>
+										</div>
+									</label>
+
+									<label class="filter-category__label">
+										<input class="filter-category__input" type="checkbox">
+										<div class="filter-category__checkbox">
+											<span>Молочные продукты</span>
+										</div>
+									</label>
+
+									<label class="filter-category__label">
+										<input class="filter-category__input" type="checkbox">
+										<div class="filter-category__checkbox">
+											<span>Хлеб</span>
+										</div>
+									</label>
+
+									<label class="filter-category__label">
+										<input class="filter-category__input" type="checkbox">
+										<div class="filter-category__checkbox">
+											<span>Мясо</span>
+										</div>
+									</label>
+
+									<label class="filter-category__label">
+										<input class="filter-category__input" type="checkbox">
+										<div class="filter-category__checkbox">
+											<span>Колбаса</span>
+										</div>
+									</label>
+
+									<label class="filter-category__label">
+										<input class="filter-category__input" type="checkbox">
+										<div class="filter-category__checkbox">
+											<span>Рыба</span>
+										</div>
+									</label>
+
+									<label class="filter-category__label">
+										<input class="filter-category__input" type="checkbox">
+										<div class="filter-category__checkbox">
+											<span>Алкоголь</span>
+										</div>
+									</label>
+								</form>
+							</div>
+
+							<div class="filter-choice filter__item">
+								<h3 class="filter-choice__title filter__title">
+									Предложения
+								</h3>
+								<form class="filter-choice__form" action="#">
+									<label class="filter-choice__label">
+										<input class="filter-choice__input" type="checkbox">
+										<span class="filter-choice__checkbox"></span>
+										<span class="filter-choice__text">Со скидкой</span>
+									</label>
+									<label class="filter-choice__label">
+										<input class="filter-choice__input" type="checkbox">
+										<span class="filter-choice__checkbox"></span>
+										<span class="filter-choice__text">Новинка</span>
+									</label>
+									<label class="filter-choice__label">
+										<input class="filter-choice__input" type="checkbox">
+										<span class="filter-choice__checkbox"></span>
+										<span class="filter-choice__text">Хит</span>
+									</label>
+								</form>
+							</div>
+
+							<div class="filter-choice filter__item">
+								<h3 class="filter-choice__title filter__title">
+									Бренд
+								</h3>
+								<form class="filter-choice__form" action="#">
+									<label class="filter-choice__label">
+										<input class="filter-choice__input" type="checkbox">
+										<span class="filter-choice__checkbox"></span>
+										<span class="filter-choice__text">CocaCola</span>
+									</label>
+									<label class="filter-choice__label">
+										<input class="filter-choice__input" type="checkbox">
+										<span class="filter-choice__checkbox"></span>
+										<span class="filter-choice__text">Pepsi</span>
+									</label>
+									<label class="filter-choice__label">
+										<input class="filter-choice__input" type="checkbox">
+										<span class="filter-choice__checkbox"></span>
+										<span class="filter-choice__text">Sprite</span>
+									</label>
+									<label class="filter-choice__label">
+										<input class="filter-choice__input" type="checkbox">
+										<span class="filter-choice__checkbox"></span>
+										<span class="filter-choice__text">Fanta</span>
+									</label>
+									<label class="filter-choice__label">
+										<input class="filter-choice__input" type="checkbox">
+										<span class="filter-choice__checkbox"></span>
+										<span class="filter-choice__text">RedBull</span>
+									</label>
+									<label class="filter-choice__label">
+										<input class="filter-choice__input" type="checkbox">
+										<span class="filter-choice__checkbox"></span>
+										<span class="filter-choice__text">Dr Pepper</span>
+									</label>
+								</form>
+							</div>
+
+							<div class="filter-price filter__item">
+								<h3 class="filter-price__title filter__title">
+									Цена
+								</h3>
+								<form class="filter-price__form" action="#">
+                  <label class="filter-price__label">
+                    <span>От 
+                      <span class="filter-price__from"></span> ₽ -
+                      До <span class="filter-price__to"></span> ₽
+                    </span>
+                  </label>
+									<input class="filter-price__input"      type="text" 
+                  data-min="100" 
+                  data-max="999" 
+                  data-from="200"
+									data-to="800">
+								</form>
+							</div>
+
+
+						</div>
+					</div>
+
+					<div class="shop__content"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="advantages">
+			<h2 class="sr-only">extra info</h2>
+			<div class="container">
+				<ul class="advantages__list">
+
+					<li class="advantages__item advantages__item--moto">
+						<h3 class="advantages__title">
+							Бесплатная доставка
+						</h3>
+						<p class="advantages__text">
+							Для заказов на сумму от 500 ₽
+						</p>
+					</li>
+
+					<li class="advantages__item advantages__item--returns">
+						<h3 class="advantages__title">
+							Возврат товара
+						</h3>
+						<p class="advantages__text">
+							Если товары были испорчены
+						</p>
+					</li>
+
+					<li class="advantages__item advantages__item--clock">
+						<h3 class="advantages__title">
+							Поддержка 24/7
+						</h3>
+						<p class="advantages__text">
+							Лучшие операторы
+						</p>
+					</li>
+
+				</ul>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-top">
+				<div class="footer-top__items">
+					<a class="footer-top__logo logo" href="#">
+						<svg class="footer-top__img">
+							<use xlink:href="images/stack/sprite.svg#logo"></use>
+						</svg>
+						<span class="sr-only">logo link</span>
+					</a>
+					<p class="footer-top__text">
+						Следите за нашими акциями
+					</p>
+					<form class="footer-top__form" action="#">
+						<label class="footer-top__form-lable sr-only" for="email"></label>
+						<input class="footer-top__form-input" id="email" type="email" name="email" placeholder="email@email.com"
+							required>
+						<button class="footer-top__form-btn" type="submit">Подписаться</button>
+					</form>
+				</div>
+
+
+				<div class="footer-top__items">
+					<ul class="footer-top__list">
+						<li class="footer-top__item">
+							<a class="footer-top__link" href="#">
+								О нас
+							</a>
+						</li>
+						<li class="footer-top__item">
+							<a class="footer-top__link" href="#">
+								Контакты
+							</a>
+						</li>
+						<li class="footer-top__item">
+							<a class="footer-top__link" href="#">
+								Публичная оферта
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer-top__items">
+					<ul class="footer-top__list">
+						<li class="footer-top__item">
+							<a class="footer-top__link" href="#">
+								Оплата и доставка
+							</a>
+						</li>
+						<li class="footer-top__item">
+							<a class="footer-top__link" href="#">
+								Вакансии
+							</a>
+						</li>
+						<li class="footer-top__item">
+							<a class="footer-top__link" href="#">
+								Акции
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer-top__items">
+					<ul class="footer-top__list">
+						<li class="footer-top__item">
+							<a class="footer-top__link" href="#">
+								Отзывы
+							</a>
+						</li>
+						<li class="footer-top__item">
+							<a class="footer-top__link" href="#">
+								Новости
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer-top__items">
+					<ul class="footer-top__contact">
+						<li class="footer-top__contact-items">
+							<a class="footer-top__contact-item" href="tel:7907288365">
+								Горячая линия +7 907 288 365
+							</a>
+						</li>
+						<li class="footer-top__contact-items">
+							<p class="footer-top__contact-item">
+								Санкт-Петербург, ул. Ленина, 1
+							</p>
+						</li>
+					</ul>
+
+					<ul class="footer-top__social">
+						<li class="footer-top__social-item">
+							<a class="footer-top__social-link" href="#">
+								<svg class="footer-top__social-img">
+									<use xlink:href="images/stack/sprite.svg#facebook"></use>
+								</svg>
+								<span class="sr-only">social link</span>
+							</a>
+						</li>
+						<li class="footer-top__social-item">
+							<a class="footer-top__social-link" href="#">
+								<svg class="footer-top__social-img">
+									<use xlink:href="images/stack/sprite.svg#youtube"></use>
+								</svg>
+								<span class="sr-only">social link</span>
+							</a>
+						</li>
+						<li class="footer-top__social-item">
+							<a class="footer-top__social-link" href="#">
+								<svg class="footer-top__social-img">
+									<use xlink:href="images/stack/sprite.svg#telegram"></use>
+								</svg>
+								<span class="sr-only">social link</span>
+							</a>
+						</li>
+						<li class="footer-top__social-item">
+							<a class="footer-top__social-link" href="#">
+								<svg class="footer-top__social-img">
+									<use xlink:href="images/stack/sprite.svg#instagram"></use>
+								</svg>
+								<span class="sr-only">social link</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="footer-bottom__inner">
+					<p class="footer-bottom__copy">
+						© 2021 ФРЕШОК
+					</p>
+					<ul class="footer-bottom__pay">
+						<li class="footer-bottom__pay-item">
+							<a class="footer-bottom__pay-link" href="#">
+								<svg class="footer-bottom__pay-img">
+									<use xlink:href="images/stack/sprite.svg#visa"></use>
+								</svg>
+								<span class="sr-only">pay link</span>
+							</a>
+						</li>
+						<li class="footer-bottom__pay-item">
+							<a class="footer-bottom__pay-link" href="#">
+								<svg class="footer-bottom__pay-img">
+									<use xlink:href="images/stack/sprite.svg#mc"></use>
+								</svg>
+								<span class="sr-only">pay link</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+
+
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>

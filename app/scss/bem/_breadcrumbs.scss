@@ -1,0 +1,38 @@
+.breadcrumbs {
+	background-color: $silver-100;
+	padding: 24px 0;
+
+	&__list {
+		display: flex;
+		justify-content: start;
+	}
+
+	&__item {
+		padding-right: 16px;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			background-image: url('../images/stack/sprite.svg#catalog_arrow');
+			width: 36px;
+			height: 10px;
+			bottom: 5px;
+			right: -12px;
+			fill: $silver-600;
+		}
+
+		&:last-child {
+			padding-right: 0;
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	&__link {
+		line-height: 1.2;
+		letter-spacing: 0.03em;
+	}
+}

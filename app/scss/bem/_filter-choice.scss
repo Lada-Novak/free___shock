@@ -1,0 +1,39 @@
+.filter-choice{
+	&__form {
+		padding: 18px;
+		border: 1px solid $silver-600;
+		border-top: none;
+		border-radius: 0 0 6px 6px;
+	}
+
+	&__input {
+		@extend %checkbox-hidden;
+
+		&:checked+.filter-choice__checkbox {
+      background-image: url('../images/icons/checked.svg');
+      border:none;
+		}
+	}
+
+	&__label {
+		margin-bottom: 12px;
+		display: block;
+	}
+
+	&__checkbox {
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		border: 1px solid $silver-600;
+		border-radius: 3px;
+		background-color: $silver-100;
+		margin-top: -3px;
+	}
+
+	&__text {
+		padding-left: 36px;
+		font-size: 18px;
+		line-height: 1.2;
+		letter-spacing: 0.03em;
+	}
+}
