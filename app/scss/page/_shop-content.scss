@@ -1,0 +1,20 @@
+.shop-content {
+  width: 100%;
+
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__list{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .shop-content__btn{
+    margin: 0;
+  }
+  &__bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

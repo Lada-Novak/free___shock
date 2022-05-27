@@ -1,0 +1,19 @@
+.sales-product__price {
+	flex-direction: initial;
+}
+
+.sales-product__price-new {
+	@extend %opensans-600;
+	margin-right: 14px;
+	font-size: 20px;
+	line-height: 1;
+	letter-spacing: 0.03em;
+}
+
+.sales-product__price-old {
+	margin: auto 0;
+	@extend %opensans-400;
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 0.03em;
+}

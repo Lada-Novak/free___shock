@@ -1,0 +1,46 @@
+.sales-product {
+	margin-bottom: 50px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 30px;
+
+	&__card {
+		padding: 12px;
+		display: flex;
+		background-color: #fff;
+		justify-content: space-beetwen;
+		border: 1px solid #cfcfcf;
+		border-radius: 6px;
+		transition: border 0.5s ease;
+
+		&:hover {
+			border: 1px solid $green-900;
+		}
+	}
+
+	&__inner {
+		margin-right: 20px;
+	}
+
+	&__img {
+		margin-top: 20px;
+		margin-bottom: 0;
+	}
+
+	&__info {
+		position: relative;
+	}
+
+	&__link {
+		margin-bottom: 0;
+	}
+
+	&__name {
+		min-height: 74px;
+		@extend %opensans-600;
+		line-height: 1.4;
+		letter-spacing: 0.03em;
+		color: $dark-900;
+		@include cut-text(2);
+	}
+}

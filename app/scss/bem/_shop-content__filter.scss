@@ -1,0 +1,65 @@
+.shop-content {
+
+	&__filter {
+		margin-bottom: 50px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	&__filter-buttons {
+		margin-top: 8px;
+	}
+
+	&__filter-btn {
+		background-color: transparent;
+
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+
+		&--active {
+			path {
+				fill: $green-900;
+			}
+		}
+	}
+}
+
+
+.jq-selectbox__select {
+	height: 47px;
+	padding: 15px 45px 15px 15px;
+	margin-right: 15px;
+	border: 1px solid $silver-600;
+	border-radius: 3px;
+	background: transparent;
+	box-shadow: none;
+	@extend %opensans-400;
+	color: $default;
+	font-size: 14px;
+	line-height: 1.2;
+	letter-spacing: 0.03em;
+	text-align: center;
+	align-items: center;
+
+	&:hover {
+		background: transparent;
+	}
+}
+
+.jq-selectbox__trigger {
+	border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+	position: absolute;
+	top: 20px;
+	right: 12px;
+	width: 11px;
+	height: 6px;
+	border: none;
+	background-image: url('../images/icons/angle_down.svg');
+}
+
+.jq-selectbox__select-text {}

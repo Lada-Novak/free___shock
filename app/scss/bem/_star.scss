@@ -1,0 +1,12 @@
+.star {
+	display: flex;
+	position: absolute;
+	align-items: center;
+	right: 5px;
+	bottom: 20px;
+
+	&__num {
+		@extend %opensans-700;
+		line-height: 1;
+	}
+}

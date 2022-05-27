@@ -1,0 +1,36 @@
+.sales {
+	background-color: $silver-100;
+	padding: 70px 0;
+
+	&__title {
+		margin-bottom: 30px;
+	}
+
+	&__filter {
+		margin-bottom: 50px;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__items:not(:last-child) {
+		margin-right: 25px;
+	}
+
+	&__add {
+		color: $white;
+		background-color: $green-900;
+		border: 1px solid $green-900;
+
+		&:focus {
+			box-shadow: 0px 0px 0px 4px $green-200;
+		}
+
+		&:hover {
+			background: #4D800C;
+		}
+
+		&:active {
+			color: rgba(255, 255, 255, 0.5);
+		}
+	}
+}

@@ -34,148 +34,13 @@
 
 
 //sales
-.sales {
-	background-color: $silver-100;
-	padding: 70px 0;
+@import "page/_sales.scss";
+@import "bem/_sales-product__card.scss";
+@import "bem/_presence.scss";
+@import "bem/_sales-product__price.scss";
+@import "bem/_star.scss";
 
-	&__title {
-		margin-bottom: 30px;
-	}
 
-	&__filter {
-		margin-bottom: 50px;
-		display: flex;
-		justify-content: center;
-	}
-
-	&__items:not(:last-child) {
-		margin-right: 25px;
-	}
-
-	&__add {
-		color: $white;
-		background-color: $green-900;
-		border: 1px solid $green-900;
-
-		&:focus {
-			box-shadow: 0px 0px 0px 4px $green-200;
-		}
-
-		&:hover {
-			background: #4D800C;
-		}
-
-		&:active {
-			color: rgba(255, 255, 255, 0.5);
-		}
-	}
-
-	///////////
-}
-
-.sales-product__list {
-	margin-bottom: 50px;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 30px;
-
-}
-
-.sales-product__card {
-	padding: 12px;
-	display: flex;
-	background-color: #fff;
-	justify-content: space-beetwen;
-	border: 1px solid #cfcfcf;
-	border-radius: 6px;
-	transition: border 0.5s ease;
-
-	&:hover {
-		border: 1px solid $green-900;
-	}
-}
-
-.sales-product__inner {
-	margin-right: 20px;
-}
-
-.sales-product__img {
-	margin-top: 20px;
-	margin-bottom: 0;
-}
-
-.sales-product__info {
-	position: relative;
-}
-
-.sales-product__link {
-	margin-bottom: 0;
-}
-
-.sales-product__name {
-	min-height: 74px;
-	@extend %opensans-600;
-	line-height: 1.4;
-	letter-spacing: 0.03em;
-	color: $dark-900;
-	@include cut-text(2);
-}
-
-.presence {
-	margin-bottom: 6px;
-	@extend %opensans-600;
-	font-size: 10px;
-	line-height: 1;
-	letter-spacing: 0.03em;
-	text-transform: uppercase;
-
-	&__item {
-		&--instock {
-			color: $green-900;
-		}
-
-		&--ends {
-			color: $red-900;
-		}
-
-		&--nostock {
-			color: $silver-600;
-		}
-	}
-}
-
-.sales-product__price {
-	flex-direction: initial;
-}
-
-.sales-product__price-new {
-	@extend %opensans-600;
-	margin-right: 14px;
-	font-size: 20px;
-	line-height: 1;
-	letter-spacing: 0.03em;
-}
-
-.sales-product__price-old {
-	margin: auto 0;
-	@extend %opensans-400;
-	font-size: 12px;
-	line-height: 1;
-	letter-spacing: 0.03em;
-}
-
-.star {
-  display: flex;
-	position: absolute;
-  align-items: center;
-	right: 5px;
-	bottom: 20px;
-
-	&__num {
-		@extend %opensans-700;
-		line-height: 1;
-	}
-}
 
 // partners
 @import "page/_partners.scss";
@@ -189,8 +54,10 @@
 
 //shop
 @import "page/_shop.scss";
+@import "page/_shop-content.scss";
 @import "bem/_filter.scss";
 @import "bem/_filter-category.scss";
 @import "bem/_filter-choice.scss";
 @import "bem/_filter-price.scss";
+@import "bem/_shop-content__filter.scss";
 
