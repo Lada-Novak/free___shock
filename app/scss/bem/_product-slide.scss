@@ -1,0 +1,36 @@
+.product-slide {
+  margin-right: 30px;
+  padding: 70px 106px;
+	max-width: 630px;
+	border: 1px solid $silver-600;
+	border-radius: 4px;
+
+	&__img {
+    position: relative;
+    width: 420px;
+    height: 420px;
+    object-fit: cover;
+  }
+  &__arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-57%);
+    bottom: 50%;
+    width: 18px;
+    height: 32px;
+  }
+  &__prev{
+    left: 50px;
+  }
+  &__next{
+    right: 50px;
+  }
+}
+
+.slick-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-57%);
+  width: 18px;
+  height: 32px;
+}

@@ -65,6 +65,10 @@ $(function () {
 		autoplay: false,
 		autoplaySpead: 3000,
 	});
+	$('.product-one__slider').slick({
+		prevArrow: '<button type="button" class="product-slide__prev"><img src="images/icons/arrow__left.svg" alt="arrow_left"></button>',
+		nextArrow: '<button type="button" class="product-slide__next"><img src="images/icons/arrow__right.svg" alt="arrow_right"></button>',
+	});
 
 
 
